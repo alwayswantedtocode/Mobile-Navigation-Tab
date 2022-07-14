@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  font-family: "Kanit", sans-serif;
+  /* background-color: bisque; */
+}
+
+a {
+  text-decoration: none;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+/* section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: bisque;
+} */
+
+.navBar {
+  width: 100%;
+  background-color: rgb(254, 254, 254);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+.navBar > .navContainer > .navList > {
+  display: flex;
+}
+
+.navBar > .navContainer > .navList > .listItem {
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: 13px;
+  color: rgb(85, 84, 87);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navBar > .navContainer > .navList > .listItem {
+    display: inline-block;
+    /* padding: 10px 20px 10px 20px; */
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 35px 10px 35px;
+    color: rgb(85, 84, 87);
+    font-size: 30px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .navBar > .navContainer > .navList > .listItem {
+    display: inline-block;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 60px 10px 60px;
+    color: rgb(85, 84, 87);
+    font-size: 30px;
+  }
+}
+.navBar > .navContainer > .navList > .listItem.active {
+  color: rgb(182, 170, 207);
+}
+p {
+  text-transform: uppercase;
+}
+
+.imageSection {
+  width: 100%;
+  min-height: 100vh;
+  background-color: bisque;
+}
+.imageContainer {
+  width: 100%;
+  min-height: 100vh;
+  /* border: 2px solid blue; */
+  position: relative;
+}
+.images {
+  width: 100%;
+  height: 660px;
+  border: 2px solid green;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 9;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .images {
+    width: 100%;
+    height: 1200px;
+    border: 2px solid green;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 9;
+  }
+  .imageSection .images > img {
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .images {
+    width: 100%;
+    height: 760px;
+    border: 2px solid green;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 9;
+  }
+
+  .imageSection .images > img {
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+  }
+}
+
+.imageSection .images > img {
+  max-width: inherit;
+  max-height: inherit;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+}
+.images.active {
+  opacity: 1;
+}
